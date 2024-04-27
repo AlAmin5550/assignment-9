@@ -14,7 +14,7 @@ const Login = () => {
         const password = form.get('password');
         signIn(email,password)
         .then((result) => {
-            console.log(result);
+            console.log(result.user);
             navigate("/")
 
             
@@ -36,9 +36,6 @@ const Login = () => {
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block text-gray-600">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600" />
-                        <div className="flex justify-end text-xs text-gray-600">
-                            <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                        </div>
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-pink-600">Sign in</button>
                 </form>

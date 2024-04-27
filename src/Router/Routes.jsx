@@ -6,6 +6,9 @@ import Home from "../Pages/Home";
 import Root from "../Pages/Root";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import CardDetails from "../Pages/CardDetails";
+import UpdateProfile from "../Pages/UpdateProfile";
+import PrivateRoute from "../components/PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -15,6 +18,7 @@ import Register from "../Pages/Register";
       children:[
         {
             path:"/",
+            loader: () => fetch('/estates.json'),
             element:<Home></Home>,
         },
         {
@@ -24,6 +28,15 @@ import Register from "../Pages/Register";
         {
           path:"/register",
           element:<Register></Register>
+        },
+        {
+          path:"/cardDetails/:id",
+          loader:() => fetch('estates.json'),
+          element:   <PrivateRoute><CardDetails></CardDetails></PrivateRoute>
+        },
+        {
+          path:"/profile",
+          element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         }
       ]
     },

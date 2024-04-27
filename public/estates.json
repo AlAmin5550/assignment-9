@@ -1,0 +1,68 @@
+
+[
+    {
+        "id": 1,
+        "estate_title": "Oceanview Imperial ",
+        "segment_name": "Penthouse",
+        "description": "An exclusive penthouse with stunning views of the Atlantic Ocean. It features a spacious living area, private rooftop terrace, and a state-of-the-art kitchen.",
+        "price": 3200000,
+        "status": "sale",
+        "area": "3200 sq ft",
+        "location": "Miami Beach, FL",
+        "facilities": ["living room", "swimming pool", "Kitchen", "rooftop terrace"],
+        "image": "https://www.57ocean.com/wp-content/uploads/2021/01/Introducing_57Ocean_Penthouse.png",
+        "button": "View Property"
+    },
+    {
+        "id": 2,
+        "estate_title": "Pacific Dream ",
+        "segment_name": "Villa",
+        "description": "A magnificent villa located right on the Pacific Ocean, offering private beach access, a large infinity pool, and outdoor dining area with ocean views.",
+        "price": 24000000,
+        "status": "sale",
+        "area": "9000 sq ft",
+        "location": "Malibu, CA",
+        "facilities": ["living room", "swimming pool", "Kitchen", "infinity pool", "private beach access"],
+        "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "button": "View Property"
+    },
+    {
+        "id": 3,
+        "estate_title": "Caribbean Seclusion Island ",
+        "segment_name": "Private Island",
+        "description": "A private island in the Caribbean with a resort-style setup. It has multiple guest villas, a private dock, and an exclusive spa area.",
+        "price": 55000000,
+        "status": "sale",
+        "area": "120 acres",
+        "location": "Caribbean",
+        "facilities": ["living room", "swimming pool", "Kitchen", "spa", "private dock"],
+        "image": "https://images.unsplash.com/photo-1585911735226-1c39d1df845b?q=80&w=1868&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "button": "View Property"
+    },
+    {
+        "id": 4,
+        "estate_title": "Empire State Skyline ",
+        "segment_name": "Penthouse",
+        "description": "A modern penthouse located in the heart of New York City, offering breathtaking skyline views. Equipped with a private gym and an outdoor deck.",
+        "price": 13000,
+        "status": "rent",
+        "area": "2800 sq ft",
+        "location": "New York, NY",
+        "facilities": ["living room", "swimming pool", "Kitchen", "private gym"],
+        "image": "https://nypost.com/wp-content/uploads/sites/2/2021/04/highest-terrace-realtor-estate-01.jpg?quality=75&strip=all",
+        "button": "View Property"
+    },
+    {
+        "id": 5,
+        "estate_title": "Aspen Summit Mansion",
+        "segment_name": "Mansion",
+        "description": "A grand mansion located in the mountains of Aspen. Featuring a spacious living area, a private movie theater, and extensive grounds with breathtaking views.",
+        "price": 26000000,
+        "status": "sale",
+        "area": "16000 sq ft",
+        "location": "Aspen, CO",
+        "facilities": ["living room", "swimming pool", "Kitchen", "private theater", "wine cellar"],
+        "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "button": "View Property"
+    }
+]

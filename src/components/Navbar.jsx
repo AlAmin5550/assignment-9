@@ -1,13 +1,30 @@
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Router/AuthProvider";
+import toast from "react-hot-toast";
+import { signOut } from "firebase/auth";
+import auth from "../Firebase/firebase.config";
 
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleSignOut = () => {
+        signOut(auth)
+            .then(() => {
+                toast.success("Sign out successful");
+                navigate("/");
+
+            }).catch((err) => {
+                console.log(err.message)
+
+            });
+    }
+
     const navLinks =
         <>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/profile">Update Profile</NavLink></li>
-            <li><NavLink to="/register">Register</NavLink></li>
-
         </>
     return (
         <div className="navbar bg-base-100">
@@ -29,8 +46,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login">
-                <button>Sign in</button></Link>
+                <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            {
+                                user ? <img src={user.photoURL} alt="Tailwind CSS Navbar component" />:<img alt="Tailwind CSS Navbar component" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
+                            }
+                            
+                        </div>
+                    </div>
+                </div>
+                {
+                    user ?
+                        <button onClick={handleSignOut} className="btn">Sign out</button> : <Link to="/login">
+                            <button className="btn">Sign in</button></Link>
+                }
+
             </div>
         </div>
     );
